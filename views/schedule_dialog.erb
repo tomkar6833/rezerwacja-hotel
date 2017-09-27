@@ -1,0 +1,28 @@
+<md-dialog class="reservation-dialog__container" aria-label="translations.setText(4188)">
+
+    <md-toolbar layout-align="center center" ng-bind="translations.setText(4188)"></md-toolbar>
+
+    <md-content class="reservation-dialog__content">
+      <div class="reservation-dialog__item">
+        <p ng-bind="translations.setText(1104)"></p>
+        <md-datepicker ng-model="CurrentReservation.startDate" md-placeholder="{{translations.setText(1104)}}"></md-datepicker>
+        <p ng-bind="translations.setText(1105)"></p>
+        <md-datepicker ng-model="CurrentReservation.endDate" md-placeholder="{{translations.setText(1105)}}"></md-datepicker>
+      </div>
+      <md-select ng-model="CurrentReservation.apartmentId" class="reservation-dialog__select" aria-label="{{translations.setText(4189)}}">
+        <md-option ng-repeat="apartment in schedule.apartments" value="{{apartment.apartment_id}}" aria-label="test">{{translations.setText(4189) + ' ' + apartment.apartment_id}}</md-option>
+      </md-select>
+      <md-input-container class="reservation-dialog__input">
+          <input type="text" ng-model="CurrentReservation.additionalInfo" placeholder="{{translations.setText(2972)}}">
+      </md-input-container>
+
+      <md-button class="md-raised md-warn" ng-if="CurrentReservation.bookingId > 0" ng-click="schedule.deleteReservation()" aria-label="{{translations.setText(2880)}}" ng-bind="translations.setText(2880)"></md-button>
+
+    </md-content>
+
+    <md-dialog-actions layout="row" class="reservation-dialog__footer">
+        <md-button class="md-raised md-primary" ng-click="schedule.validateReservation($event)" aria-label="{{translations.setText(475)}}" ng-bind="translations.setText(475)"></md-button>
+        <md-button class="md-raised md-warn" ng-click="cancelSchedule()" aria-label="{{translations.setText(71)}}" ng-bind="translations.setText(71)"></md-button>
+    </md-dialog-actions>
+
+</md-dialog>

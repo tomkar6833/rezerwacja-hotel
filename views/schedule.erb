@@ -1,0 +1,108 @@
+
+<md-content class="schedule" ng-if="schedule.bookingDownloaded">
+
+    <div class="schedule-header__wrapper">
+        <div class="schedule-header__container" ng-style="{'margin-left': schedule.marginLeft + 'px'}">
+            <div class="schedule-header__item" md-whiteframe="5" md-colors="{background: 'blue-500'}">
+                <p class="schedule-header__month-name">{{DateParams.secondPrev.date.getMonth() | monthName}} {{DateParams.secondPrev.date.getFullYear()}}</p>
+                <div class="schedule-header__container-item">
+                    <div class="schedule-header__day-number bg-light" md-whiteframe="2" ng-repeat="i in DateParams.secondPrev.month track by $index" ng-class="{true: 'schedule-header__day-number--past'} [i.past]">
+                        <p class="font-13 color-basic">{{$index + 1}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-header__item" md-whiteframe="5" md-colors="{background: 'blue-500'}">
+                <p class="schedule-header__month-name">{{DateParams.prev.date.getMonth() | monthName}} {{DateParams.prev.date.getFullYear()}}</p>
+                <div class="schedule-header__container-item">
+                    <div class="schedule-header__day-number bg-light" md-whiteframe="2" ng-repeat="i in DateParams.prev.month track by $index" ng-class="{true: 'schedule-header__day-number--past'} [i.past]">
+                        <p class="font-13 color-basic">{{$index + 1}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-header__item" md-whiteframe="5" md-colors="{background: 'blue-500'}">
+                <p class="schedule-header__month-name">{{DateParams.current.date.getMonth() | monthName}} {{DateParams.current.date.getFullYear()}}</p>
+                <div class="schedule-header__container-item">
+                    <div class="schedule-header__day-number bg-light" md-whiteframe="2" ng-repeat="i in DateParams.current.month track by $index" ng-class="{true: 'schedule-header__day-number--past'} [i.past]">
+                        <p class="font-13 color-basic">{{$index + 1}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-header__item" md-whiteframe="5" md-colors="{background: 'blue-500'}">
+                <p class="schedule-header__month-name">{{DateParams.next.date.getMonth() | monthName}} {{DateParams.next.date.getFullYear()}}</p>
+                <div class="schedule-header__container-item">
+                    <div class="schedule-header__day-number bg-light" md-whiteframe="2" ng-repeat="i in DateParams.next.month track by $index" ng-class="{true: 'schedule-header__day-number--past'} [i.past]">
+                        <p class="font-13 color-basic">{{$index + 1}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-header__item" md-whiteframe="5" md-colors="{background: 'blue-500'}">
+                <p class="schedule-header__month-name">{{DateParams.secondNext.date.getMonth() | monthName}} {{DateParams.secondNext.date.getFullYear()}}</p>
+                <div class="schedule-header__container-item">
+                    <div class="schedule-header__day-number bg-light" md-whiteframe="2" ng-repeat="i in DateParams.secondNext.month track by $index" ng-class="{true: 'schedule-header__day-number--past'} [i.past]">
+                        <p class="font-13 color-basic">{{$index + 1}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="schedule__shadow"></div>
+    <md-conainer class="schedule__apartment"  ng-repeat="(key, apartment) in schedule.apartments | orderBy:'apartment_id'">
+        <div class="schedule__apartment-name md-whiteframe-8dp" ng-bind="'Apartament ' + apartment.apartment_id"></div>
+        <div class="schedule__apartment-container">
+            <div class="schedule__overflow" ng-style="{'margin-left': schedule.marginLeft + 'px'}">
+                <div class="schedule__day-item bg-light cursor-pointer" ng-repeat=" i in apartment.calender.secondPrev.month track by $index"
+                     ng-class="[{true: 'schedule__day-item--selected md-whiteframe-6dp', false: 'md-whiteframe-1dp'}[i.selected], {true: 'schedule__day-item--past'}[i.past && !i.selected]]"
+                     swipe-element-start="schedule.startSwipeElement($event, $index, apartment.calender.secondPrev.date, 'secondPrev', key, apartment.apartment_id)"
+                     swipe-element-move="schedule.swipeElement($event)"
+                     swipe-element="schedule.endSwipeElement($event)">
+                </div>
+                <div class="schedule__day-item bg-light cursor-pointer" ng-repeat="i in apartment.calender.prev.month track by $index"
+                     ng-class="[{true: 'schedule__day-item--selected md-whiteframe-6dp', false: 'md-whiteframe-1dp'}[i.selected], {true: 'schedule__day-item--past'}[i.past && !i.selected]]"
+                     swipe-element-start="schedule.startSwipeElement($event, $index, apartment.calender.prev.date, 'prev', key, apartment.apartment_id)"
+                     swipe-element-move="schedule.swipeElement($event)"
+                     swipe-element="schedule.endSwipeElement($event)">
+                </div>
+                <div class="schedule__day-item bg-light cursor-pointer" ng-repeat="i in apartment.calender.current.month track by $index"
+                     ng-class="[{true: 'schedule__day-item--selected md-whiteframe-6dp', false: 'md-whiteframe-1dp'}[i.selected], {true: 'schedule__day-item--past'}[i.past && !i.selected]]"
+                     swipe-element-start="schedule.startSwipeElement($event, $index, apartment.calender.current.date, 'current', key, apartment.apartment_id)"
+                     swipe-element-move="schedule.swipeElement($event)"
+                     swipe-element="schedule.endSwipeElement($event)">
+                </div>
+                <div class="schedule__day-item bg-light cursor-pointer" ng-repeat="i in apartment.calender.next.month track by $index"
+                     ng-class="[{true: 'schedule__day-item--selected md-whiteframe-6dp', false: 'md-whiteframe-1dp'}[i.selected], {true: 'schedule__day-item--past'}[i.past && !i.selected]]"
+                     swipe-element-start="schedule.startSwipeElement($event, $index, apartment.calender.next.date, 'next', key, apartment.apartment_id)"
+                     swipe-element-move="schedule.swipeElement($event)"
+                     swipe-element="schedule.endSwipeElement($event)">
+                </div>
+                <div class="schedule__day-item bg-light cursor-pointer" ng-repeat="i in apartment.calender.secondNext.month track by $index"
+                     ng-class="[{true: 'schedule__day-item--selected md-whiteframe-6dp', false: 'md-whiteframe-1dp'}[i.selected], {true: 'schedule__day-item--past'}[i.past && !i.selected]]"
+                     swipe-element-start="schedule.startSwipeElement($event, $index, apartment.calender.secondNext.date, 'secondNext', key, apartment.apartment_id)"
+                     swipe-element-move="schedule.swipeElement($event)"
+                     swipe-element="schedule.endSwipeElement($event)">
+                </div>
+                <div md-whiteframe="9" class="schedule__booking-item"
+                     ng-repeat="item in Bookings[apartment.apartment_id]"
+                     ng-style="{'margin-left': item.marginLeft + 'px', 'width': item.width + 'px'}"
+                     ng-click="schedule.changeReservation($event, item)">
+                    <p class="schedule__booking-item-name font-bold font-13 cursor-pointer" ng-bind="translations.setText(2008) + ': ' + item.bookingStart"></p>
+                    <p class="schedule__booking-item-name font-bold font-13 cursor-pointer" ng-bind="translations.setText(2009) + ': ' + item.bookingEnd"></p>
+                    <p class="schedule__booking-item-name font-12 cursor-pointer" ng-bind="translations.setText(1767) + ': ' + item.information"></p>
+                </div>
+            </div>
+        </div>
+    </md-conainer>
+
+    <div class="arrows">
+        <md-button class="md-raised arrows__item" ng-click="schedule.marginLeft = schedule.marginLeft + 150">Data w dół</md-button>
+        <md-button class="md-raised arrows__item" ng-click="schedule.marginLeft = schedule.marginLeft - 150">Data w górę</md-button>
+    </div>
+
+</md-content>
+
+

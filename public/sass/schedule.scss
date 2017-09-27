@@ -1,0 +1,161 @@
+.schedule-header{
+
+	&__wrapper{
+		width:80%;
+		margin-left:18%;
+		overflow:hidden;
+		border-radius:5px;
+	}
+	&__container{
+		display: flex;
+		width:4000px;
+	}
+	&__item{
+		padding:10px 0 5px;
+		margin:0 -1px 5px;
+		border-left:1px solid #fff;
+		border-right:1px solid #fff;
+		border-radius:5px;
+	}
+	&__container-item{
+		display:flex;
+		flex-direction:row;
+	}
+	&__month-name{
+		text-align: center;
+	}
+	&__day-number{
+		width:20px;
+		height:20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin:2px;
+		border-radius:4px;
+		border:1px solid #6d6d6d;
+
+		&--past{
+			background-color: lightgray;
+		}
+	}
+}
+
+.schedule{
+
+	background-color:#fff;
+	margin:30px 20px;
+	position: relative;
+	padding: 30px 0 0;
+
+	&__apartment{
+		display: flex;
+		width:100%;
+		overflow:hidden;
+		align-items: center;
+		justify-content: space-around;
+	}
+	&__shadow{
+		position: absolute;
+		top: 31px;
+		left: 18%;
+		width: 80%;
+		bottom:85px;
+		padding: 10px;
+		border-radius:5px;
+		box-shadow: 2px 2px 35px -8px black;
+	}
+	&__apartment-name{
+		width:12%;
+		display: block;
+		text-align: center;
+		padding:10px;
+
+	}
+	&__apartment-container{
+		width:80%;
+		overflow: hidden;
+		padding: 10px 0;
+	}
+	&__overflow{
+		display: flex;
+		width:4000px;
+		position: relative;
+	}
+	&__day-item{
+		width:20px;
+		height:60px;
+		margin:2px;
+		text-align: center;
+		display: flex;
+		border:1px solid #ccc;
+
+		&--selected{
+			background-color: rgb(255,87,34);
+		}
+        &--past{
+            background-color: lightgray;
+        }
+	}
+	&__booking-item{
+		position: absolute;
+		top:3px;
+		left:4px;
+		height:56px;
+		text-align: center;
+		padding:5px 2px;
+		border-radius: 5px;
+		background-color: #9bdbff;
+		outline:none;
+	}
+	&__booking-item-name{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+}
+.reservation-dialog{
+
+	&__container{
+		width:700px;
+		max-width:90%;
+		text-align: center;
+		overflow: hidden;
+	}
+	&__content{
+		display: flex;
+		padding:20px 0;
+		height:415px;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__item{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width:80%;
+		padding-bottom:20px;
+	}
+	&__input{
+		width:60%;
+		padding:20px;
+	}
+	&__select{
+		width:60%;
+		padding:20px;
+	}
+	&__footer{
+
+	}
+}
+.arrows{
+	display: flex;
+	justify-content: space-around;
+	padding:20px 0 20px 18%;
+
+	&__item{
+		width:200px;
+	}
+}

@@ -1,0 +1,173 @@
+.schedule-header__wrapper {
+  width: 80%;
+  margin-left: 18%;
+  overflow: hidden;
+  border-radius: 5px; }
+
+.schedule-header__container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4000px; }
+
+.schedule-header__item {
+  padding: 10px 0 5px;
+  margin: 0 -1px 5px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-radius: 5px; }
+
+.schedule-header__container-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.schedule-header__month-name {
+  text-align: center; }
+
+.schedule-header__day-number {
+  width: 20px;
+  height: 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2px;
+  border-radius: 4px;
+  border: 1px solid #6d6d6d; }
+  .schedule-header__day-number--past {
+    background-color: lightgray; }
+
+.schedule {
+  background-color: #fff;
+  margin: 30px 20px;
+  position: relative;
+  padding: 30px 0 0; }
+  .schedule__apartment {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .schedule__shadow {
+    position: absolute;
+    top: 31px;
+    left: 18%;
+    width: 80%;
+    bottom: 85px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 35px -8px black; }
+  .schedule__apartment-name {
+    width: 12%;
+    display: block;
+    text-align: center;
+    padding: 10px; }
+  .schedule__apartment-container {
+    width: 80%;
+    overflow: hidden;
+    padding: 10px 0; }
+  .schedule__overflow {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 4000px;
+    position: relative; }
+  .schedule__day-item {
+    width: 20px;
+    height: 60px;
+    margin: 2px;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #ccc; }
+    .schedule__day-item--selected {
+      background-color: #ff5722; }
+    .schedule__day-item--past {
+      background-color: lightgray; }
+  .schedule__booking-item {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    height: 56px;
+    text-align: center;
+    padding: 5px 2px;
+    border-radius: 5px;
+    background-color: #9bdbff;
+    outline: none; }
+  .schedule__booking-item-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.reservation-dialog__container {
+  width: 700px;
+  max-width: 90%;
+  text-align: center;
+  overflow: hidden; }
+
+.reservation-dialog__content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  height: 415px;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.reservation-dialog__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  padding-bottom: 20px; }
+
+.reservation-dialog__input {
+  width: 60%;
+  padding: 20px; }
+
+.reservation-dialog__select {
+  width: 60%;
+  padding: 20px; }
+
+.arrows {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  padding: 20px 0 20px 18%; }
+  .arrows__item {
+    width: 200px; }

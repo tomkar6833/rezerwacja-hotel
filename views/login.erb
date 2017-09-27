@@ -1,0 +1,42 @@
+<div class="center-xy">
+
+  <div class="login-box box-shadow bg-transparent" ng-show="parameters.showLoginBox">
+
+    <img class="login-box__logo" ng-src="img/logo_tech_vector.svg" alt="">
+
+    <form>
+
+      <input type="text" class="login-box__text-input border-input color-basic font-16 font-regular" name="username" ng-model="authentication.username"
+             placeholder="{{ setText(1132) | lowercase }}"
+             ng-keydown="$event.which === 13 && authentication.login()" focus="autofocus">
+
+      <input type="password" class="login-box__text-input border-input color-basic font-16 font-regular" name="password"
+             ng-model="authentication.password"
+             placeholder="{{ setText(1101) | lowercase }}"
+             ng-keydown="$event.which === 13 && authentication.login()">
+
+      <input type="button" ng-value="setText(1092)" class="login-box__button bg-gradient color-light font-bold font-20 cursor-pointer" ng-click="authentication.login()">
+
+    </form>
+
+    <div class="remember-pass-wrapper">
+
+      <div class="remember-pass cursor-pointer" ng-click="authentication.rememberMe = !authentication.rememberMe">
+
+        <div class="remember-pass__icon-wrapper bg-input border-input">
+          <img class="remember-pass__icon" ng-src="img/icons/checkbox_checked.svg" alt="" ng-if="authentication.rememberMe">
+        </div>
+
+        <div class="remember-pass__text font-13 color-light" ng-bind="setText(1854)"></div>
+
+      </div>
+
+      <div class="forgotten-pass cursor-pointer">
+        <div class="forgotten-pass__text font-13 color-light" ng-bind="setText(1853)" ng-click="goForgotPassword()"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

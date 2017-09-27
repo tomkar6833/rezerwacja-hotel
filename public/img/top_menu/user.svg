@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Warstwa_1"
+   x="0px"
+   y="0px"
+   width="64px"
+   height="64px"
+   viewBox="0 0 64 64"
+   enable-background="new 0 0 64 64"
+   xml:space="preserve"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="logowanie.svg"><metadata
+   id="metadata9"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs7" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="480"
+   id="namedview5"
+   showgrid="false"
+   inkscape:zoom="3.6875"
+   inkscape:cx="32"
+   inkscape:cy="32"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Warstwa_1" />
+<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   d="M32,64C14.327,64,0,49.673,0,32C0,14.327,14.327,0,32,0c17.671,0,32,14.327,32,32  C64,49.673,49.672,64,32,64 M32,6C17.641,6,6,17.642,6,32c0,6.715,2.568,12.816,6.746,17.43c3.766-1.821,2.383-0.306,7.311-2.334  c5.041-2.072,6.236-2.795,6.236-2.795l0.047-4.777c0,0-1.889-1.434-2.475-5.929c-1.182,0.339-1.572-1.377-1.641-2.47  c-0.064-1.055-0.686-4.351,0.756-4.054c-0.295-2.201-0.506-4.185-0.402-5.237c0.361-3.69,3.943-7.546,9.459-7.828  c6.49,0.281,9.06,4.135,9.421,7.825c0.105,1.052-0.127,3.038-0.422,5.235c1.441-0.294,0.814,2.997,0.744,4.052  c-0.063,1.093-0.463,2.803-1.641,2.465c-0.59,4.494-2.477,5.917-2.477,5.917l0.043,4.753c0,0,1.195,0.676,6.236,2.749  c4.928,2.028,3.543,0.602,7.309,2.427C55.432,44.816,58,38.715,58,32C58,17.642,46.359,6,32,6"
+   id="path3"
+   style="fill:#ffffff" />
+</svg>

@@ -1,0 +1,75 @@
+@media all and (max-width: 450px) {
+  body {
+    background-color: #d8d8d8;
+  }
+}
+
+@media all and (min-width: 451px) {
+  body {
+    background: #dcdcdc url("/img/interior.jpg") center no-repeat;
+  }
+}
+
+.color-basic {
+  color: #101521;
+}
+.color-light {
+  color: #ffffff;
+}
+.color-style {
+  color: #2ec3a4;
+}
+.color-alarm {
+  color: #ff2509;
+}
+.color-settings {
+  color: #00000f;
+}
+
+.bg-style {
+  background-color: #f59e1a;
+}
+.bg-gradient {
+  background: radial-gradient(#32cdac, #2ec3a4, #25baa1);
+}
+.bg-transparent {
+  background-color: rgba(0, 0, 25, 0.7);
+}
+.bg-ok {
+  background-color: #25baa1;
+}
+.bg-cancel {
+  background-color: #c5011c;
+}
+.bg-default {
+  background-color: #bdbdbd;
+}
+.bg-input {
+  background-color: #ffffff;
+}
+.bg-light {
+  background-color: #f8f8f8;
+}
+.bg-dark {
+  background-color: #101521;
+}
+
+.border-ok {
+  border: 1px solid #f59e1a !important;
+}
+.border-error {
+  border: 1px solid #de0120 !important;
+}
+.border-input {
+  border: 1px solid #bfbfbf;
+}
+.border-light {
+  border: 1px solid #ffffff;
+}
+.border-input:focus {
+  border: 1px solid #32cdac;
+}
+
+.box-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
